@@ -66,13 +66,15 @@ const onClickedSquare = function (event) {
   event.preventDefault()
   //  const eventID = $(event.target).event('id')
   //  gameBoard[eventID] = store.player
-  $(event.target).text(store.player)
-  if (store.player === 'x') {
-    store.player = 'o'
-  } else {
-    store.player = 'x'
+
+  if ($(event.target).html() !== 'o' && $(event.target).html() !== 'x') {
+    $(event.target).text(store.player)
+    if (store.player === 'x') {
+      store.player = 'o'
+    } else {
+      store.player = 'x'
+    }
   }
-  if (($event.target).html() !== 'o' && $(event.target).html() !== 'x')
   api.updateGame()
     .then(ui.gameUpdateSuccess)
     .catch(ui.gameUpdateFailure)
