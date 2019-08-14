@@ -79,6 +79,16 @@ const resetSuccess = function () {
   $('#message').text('New Game Has Started!')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#game-board').show()
+  $('#0').text('')
+  $('#1').text('')
+  $('#2').text('')
+  $('#3').text('')
+  $('#4').text('')
+  $('#5').text('')
+  $('#6').text('')
+  $('#7').text('')
+  $('#8').text('')
 }
 
 const resetFailure = function () {

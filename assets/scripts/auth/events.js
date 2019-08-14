@@ -52,6 +52,7 @@ const onSignOut = function (event) {
 
 const onResetGame = function (event) {
   event.preventDefault()
+  console.log('This is game data', event)
   api.resetGame()
     .then(ui.resetSuccess)
     .catch(ui.resetFailure)
