@@ -59,18 +59,20 @@ const onResetGame = function (event) {
 }
 
 // const gameBoard = ['', '', '', '', '', '', '', '', '']
+
 store.player = 'x'
 
 const onClickedSquare = function (event) {
   event.preventDefault()
-//  const dataID = $(event.target).event('id')
-//  gameBoard[dataID] = store.player
+  //  const eventID = $(event.target).event('id')
+  //  gameBoard[eventID] = store.player
   $(event.target).text(store.player)
   if (store.player === 'x') {
     store.player = 'o'
   } else {
     store.player = 'x'
   }
+  if (($event.target).html() !== 'o' && $(event.target).html() !== 'x')
   api.updateGame()
     .then(ui.gameUpdateSuccess)
     .catch(ui.gameUpdateFailure)
