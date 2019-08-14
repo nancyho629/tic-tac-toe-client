@@ -15,6 +15,12 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create-game').on('submit', authEvents.onResetGame)
   $('#game-board').hide()
+
+/*  const boxes = document.getElementsbyClassName('box')
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].on('click', authEvents.onClickedSquare)
+  } */
+
   $('#0').on('click', authEvents.onClickedSquare)
   $('#1').on('click', authEvents.onClickedSquare)
   $('#2').on('click', authEvents.onClickedSquare)

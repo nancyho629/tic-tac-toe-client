@@ -2,6 +2,7 @@
 
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
 // function we have to require: getFormFields
 const getFormFields = require('./../../../lib/get-form-fields')
 
@@ -52,15 +53,24 @@ const onSignOut = function (event) {
 
 const onResetGame = function (event) {
   event.preventDefault()
-  console.log('This is game data', event)
   api.resetGame()
     .then(ui.resetSuccess)
     .catch(ui.resetFailure)
 }
 
+// const gameBoard = ['', '', '', '', '', '', '', '', '']
+store.player = 'x'
+
 const onClickedSquare = function (event) {
   event.preventDefault()
-  $(event.target).text('x')
+//  const dataID = $(event.target).event('id')
+//  gameBoard[dataID] = store.player
+  $(event.target).text(store.player)
+  if (store.player === 'x') {
+    store.player = 'o'
+  } else {
+    store.player = 'x'
+  }
   api.updateGame()
     .then(ui.gameUpdateSuccess)
     .catch(ui.gameUpdateFailure)
