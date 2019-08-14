@@ -1,1 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+
+#hide {
+  display: none;
+}
+
+.row{
+  border: 1px solid black;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
