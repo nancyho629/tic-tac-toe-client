@@ -27,7 +27,7 @@ const signInSuccess = function (data) {
   // $('#message').className('success')
   $('#message').addClass('success') // optional adds class for styling
   console.log('signinsuccess ran. User is', store.user)
-  $('#signed-in-user').text(store.user.email)
+//  $('#signed-in-user').text(store.user.email)
   $('form').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -48,7 +48,7 @@ const changePasswordSuccess = function () {
   $('#message').removeClass()
   // $('#message').className('success')
   $('#message').addClass('success') // optional adds class for styling
-  console.log('change password success ran')
+  // console.log('change password success ran')
   $('form').trigger('reset')
 }
 
@@ -75,38 +75,6 @@ const signOutFailure = function () {
   $('#message').text('Sign Out Failed')
 }
 
-const resetSuccess = function () {
-  $('#message').text('New Game Has Started!')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#game-board').show()
-  $('#0').text('')
-  $('#1').text('')
-  $('#2').text('')
-  $('#3').text('')
-  $('#4').text('')
-  $('#5').text('')
-  $('#6').text('')
-  $('#7').text('')
-  $('#8').text('')
-}
-
-const resetFailure = function () {
-  $('#message')
-    .text('Game creation failed')
-}
-
-const gameUpdateSuccess = function () {
-  $('#message').text('Gameboard has been updated with the move!')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-}
-
-const gameUpdateFailure = function () {
-  $('#message')
-    .text('Game board was not updated with the move.')
-}
-
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -115,9 +83,5 @@ module.exports = {
   changePasswordFailure,
   changePasswordSuccess,
   signOutFailure,
-  signOutSuccess,
-  resetFailure,
-  resetSuccess,
-  gameUpdateFailure,
-  gameUpdateSuccess
+  signOutSuccess
 }
