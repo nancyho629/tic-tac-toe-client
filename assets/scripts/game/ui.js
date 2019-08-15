@@ -33,7 +33,7 @@ const gameUpdateSuccess = function (data) {
 
 const gameUpdateFailure = function () {
   $('#message')
-    .text('Game board was not updated with the move.')
+    .text('Game was not updated.')
 }
 
 module.exports = {

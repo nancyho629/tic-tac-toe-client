@@ -20,7 +20,7 @@ const updateGame = function (data) {
   // console.log('user token is', store.user.token)
   console.log('player is ', store.player)
   return $.ajax({
-    url: config.apiUrl + '/games' + store.game.id,
+    url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

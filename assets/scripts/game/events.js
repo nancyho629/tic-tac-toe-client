@@ -14,6 +14,7 @@ const onResetGame = function (event) {
 
 const onClickedSquare = function (event) {
   event.preventDefault()
+  // put index number of move into store.index since data expected is {"game": {"cell": {"index": 0,  "value": "x"  },  "over": false  }}
   store.index = $(event.target).data('id')
   // const info = board.updateBoard(event)
   // console.log('onclick index', store.index)
