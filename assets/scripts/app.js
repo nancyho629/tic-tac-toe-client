@@ -16,6 +16,8 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create-game').on('submit', gameEvents.onResetGame)
   $('#game-board').hide()
+  $('#create-game').hide()
+  $('#sign-out').hide()
   $('.box').on('click', gameEvents.onClickedSquare)
   // $('#1').on('click', gameEvents.onClickedSquare)
   // $('#2').on('click', gameEvents.onClickedSquare)

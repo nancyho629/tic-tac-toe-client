@@ -14,7 +14,8 @@ const resetSuccess = function (data) {
   $('#message').addClass('success')
   $('#game-board').show()
   $('.box').text('')
-  console.log(data)
+  $('#player-message').text('It\'s Player X\'s turn')
+  // console.log(data)
 }
 
 const resetFailure = function () {
@@ -23,9 +24,16 @@ const resetFailure = function () {
 }
 
 const gameUpdateSuccess = function (data) {
-  console.log('the index is ', store.index)
-  console.log('the player in update is', store.player)
+  // console.log('the index is ', store.index)
+  // console.log('the player in update is', store.player)
   board.updateBoard(data)
+  if (board.checkWinner()) {
+    if (store.player === 'x') {
+      $('#player-message').text('o has won!')
+    } else {
+      $('#player-message').text('x has won!')
+    }
+  }
   $('#message').text('Gameboard has been updated with the move!')
   $('#message').removeClass()
   $('#message').addClass('success')

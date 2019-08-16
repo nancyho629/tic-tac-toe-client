@@ -14,11 +14,11 @@ const resetGame = function (data) {
 }
 
 const updateGame = function (data) {
-  console.log('stored info:', store)
+  // console.log('stored info:', store)
   // console.log('store.game.id', store.game.id)
   // console.log('updategame store.index', store.index)
   // console.log('user token is', store.user.token)
-  console.log('player is ', store.player)
+  // console.log('player is ', store.player)
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -31,7 +31,7 @@ const updateGame = function (data) {
           'index': store.index,
           'value': store.player
         },
-        'over': false
+        'over': store.game.over
       }
     }
   })

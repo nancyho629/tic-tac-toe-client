@@ -26,7 +26,7 @@ const signInSuccess = function (data) {
   $('#message').removeClass()
   // $('#message').className('success')
   $('#message').addClass('success') // optional adds class for styling
-  console.log('signinsuccess ran. User is', store.user)
+//  console.log('signinsuccess ran. User is', store.user)
 //  $('#signed-in-user').text(store.user.email)
   $('form').trigger('reset')
   $('#sign-in').hide()
@@ -34,6 +34,8 @@ const signInSuccess = function (data) {
   $('#create-example').show()
   $('#hide').css('display', 'block')
   $('#game').show()
+  $('#create-game').show()
+  $('#sign-out').show()
   $('change-password').show()
 }
 
