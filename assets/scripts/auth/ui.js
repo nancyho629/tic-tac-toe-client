@@ -36,7 +36,8 @@ const signInSuccess = function (data) {
   $('#game').show()
   $('#create-game').show()
   $('#sign-out').show()
-  $('change-password').show()
+  $('#change-password').show()
+  $('#game-stats').show()
 }
 
 const signInFailure = function () {

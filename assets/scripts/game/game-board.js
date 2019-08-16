@@ -65,7 +65,7 @@ const winner = function (data) {
 }
 
 const checkWinner = function (data) {
-//  console.log('Does checkwinner work?', store.game)
+  console.log('Does checkwinner work?', store.game)
   if (winner()) {
     return true
   } else {

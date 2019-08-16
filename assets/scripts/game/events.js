@@ -25,7 +25,15 @@ const onClickedSquare = function (event) {
     .then(ui.gameUpdateSuccess(event))
     .catch(ui.gameUpdateFailure)
 }
+
+const onGameStats = function () {
+  event.preventDefault()
+  api.gameStats()
+    .then(ui.gameStatsSuccess)
+    .catch(ui.gameStatsFailure)
+}
 module.exports = {
   onResetGame,
-  onClickedSquare
+  onClickedSquare,
+  onGameStats
 }

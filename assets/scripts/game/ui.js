@@ -44,9 +44,20 @@ const gameUpdateFailure = function () {
     .text('Game was not updated.')
 }
 
+const gameStatsSuccess = function (games) {
+  $('#already-message').text(`You've played ${games.length} games!`)
+}
+
+const gameStatsFailure = function () {
+  $('#message')
+    .text('Game stats were not retrieved.')
+}
+
 module.exports = {
   resetFailure,
   resetSuccess,
   gameUpdateFailure,
-  gameUpdateSuccess
+  gameUpdateSuccess,
+  gameStatsSuccess,
+  gameStatsFailure
 }

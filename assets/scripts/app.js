@@ -19,6 +19,8 @@ $(() => {
   $('#create-game').hide()
   $('#sign-out').hide()
   $('.box').on('click', gameEvents.onClickedSquare)
+  $('#game-stats').hide()
+  $('#game-stats').on('click', gameEvents.onGameStats)
   // $('#1').on('click', gameEvents.onClickedSquare)
   // $('#2').on('click', gameEvents.onClickedSquare)
   // $('#3').on('click', gameEvents.onClickedSquare)
