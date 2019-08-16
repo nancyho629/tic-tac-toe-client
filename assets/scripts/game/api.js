@@ -2,7 +2,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const resetGame = function (data) {
+const resetGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -42,7 +42,7 @@ const gameStats = function () {
     url: config.apiUrl + '/games',
     method: 'GET',
     headers: {
-      contentType: 'application/json',
+    //  contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     }
   })

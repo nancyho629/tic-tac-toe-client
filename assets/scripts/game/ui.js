@@ -1,7 +1,6 @@
 'use strict'
 
 const store = require('../store')
-const board = require('./game-board')
 
 const resetSuccess = function (data) {
   store.game = data.game
@@ -12,9 +11,10 @@ const resetSuccess = function (data) {
   $('#message').text('New Game Has Started!')
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('#game-board').show()
   $('.box').text('')
   $('#player-message').text('It\'s Player X\'s turn')
+  $('#already-message').text('')
+  $('#game-board').show()
   console.log(store.game)
 }
 
@@ -23,21 +23,10 @@ const resetFailure = function () {
     .text('Game creation failed')
 }
 
-const gameUpdateSuccess = function (data) {
+const gameUpdateSuccess = function () {
   // console.log('the index is ', store.index)
   // console.log('the player in update is', store.player)
-  board.updateBoard(data)
-  if (board.checkWinner()) {
-    if (store.player === 'x') {
-      $('#player-message').text('o has won!')
-      $('.box').off('click')
-      store.game.over = true
-    } else {
-      $('#player-message').text('x has won!')
-      $('.box').off('click')
-      store.game.over = true
-    }
-  }
+
   $('#message').text('Gameboard has been updated with the move!')
   $('#message').removeClass()
   $('#message').addClass('success')
@@ -49,7 +38,8 @@ const gameUpdateFailure = function () {
 }
 
 const gameStatsSuccess = function (games) {
-  $('#already-message').text(`You've played ${games.length} games!`)
+  console.log('number of games', games)
+  $('#already-message').text(`You've played ${games.games.length} games!`)
 }
 
 const gameStatsFailure = function () {
