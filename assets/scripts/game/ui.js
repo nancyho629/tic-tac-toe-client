@@ -31,11 +31,11 @@ const gameUpdateSuccess = function (data) {
     if (store.player === 'x') {
       $('#player-message').text('o has won!')
       $('.box').off('click')
-      store.game.over = 'true'
+      store.game.over = true
     } else {
       $('#player-message').text('x has won!')
       $('.box').off('click')
-      store.game.over = 'true'
+      store.game.over = true
     }
   }
   $('#message').text('Gameboard has been updated with the move!')
