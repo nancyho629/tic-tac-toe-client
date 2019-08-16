@@ -13,4 +13,4 @@ curl "https://tic-tac-toe-wdi.herokuapp.com/sign-in" \
 
 echo
 
-# EMAIL='2@2.COM' PASSWORD='2' sh curl-scripts/auth/sign-in.sh
+# EMAIL='3@3.COM' PASSWORD='3' sh curl-scripts/auth/sign-in.sh

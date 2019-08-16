@@ -14,4 +14,4 @@ curl "https://tic-tac-toe-wdi.herokuapp.com/change-password" \
 
 echo
 
-# TOKEN=BAhJIiVjYzNlNzhjYjA1YWRhNDEyODRjMDA4YjM4Njk3ZGIzNgY6BkVG--a0e9730147eec92979a30c29fad4471e27a82b6c OLD='2' NEW='3' sh curl-scripts/auth/change-password.sh
+# TOKEN=BAhJIiU0OWYyYzY3OGJjZjUwYjdjOTAzNzMxMTkwOTY3MDg0NwY6BkVG--a27972aedc57064b6c633efb31cad857756dee54 OLD='3' NEW='4' sh curl-scripts/auth/change-password.sh
