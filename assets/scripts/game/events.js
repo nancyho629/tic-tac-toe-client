@@ -7,6 +7,7 @@ const store = require('../store')
 const onResetGame = function (event) {
   event.preventDefault()
   store.player = 'x'
+  $('.box').on('click')
   api.resetGame(event)
     .then(ui.resetSuccess)
     .catch(ui.resetFailure)

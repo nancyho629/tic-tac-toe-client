@@ -27,6 +27,7 @@ const updateBoard = function (data) {
     }
   }
 }
+
 const winner = function (data) {
   const gameBoardFill = store.game.cells
   if ((gameBoardFill[0] === 'x' && gameBoardFill[1] === 'x' && gameBoardFill[2] === 'x') || (gameBoardFill[0] === 'o' && gameBoardFill[1] === 'o' && gameBoardFill[2] === 'o')) {
@@ -59,6 +60,7 @@ const winner = function (data) {
   } else {
     if (!(gameBoardFill.includes(''))) {
       console.log('draw')
+      $('#player-message').text('It\'s a draw!!')
       return false
     }
   }

@@ -15,7 +15,7 @@ const resetSuccess = function (data) {
   $('#game-board').show()
   $('.box').text('')
   $('#player-message').text('It\'s Player X\'s turn')
-  // console.log(data)
+  console.log(store.game)
 }
 
 const resetFailure = function () {
@@ -30,8 +30,12 @@ const gameUpdateSuccess = function (data) {
   if (board.checkWinner()) {
     if (store.player === 'x') {
       $('#player-message').text('o has won!')
+      $('.box').off('click')
+      store.game.over = 'true'
     } else {
       $('#player-message').text('x has won!')
+      $('.box').off('click')
+      store.game.over = 'true'
     }
   }
   $('#message').text('Gameboard has been updated with the move!')
