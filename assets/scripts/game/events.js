@@ -16,13 +16,7 @@ const onResetGame = function (event) {
 const onClickedSquare = function (data) {
   event.preventDefault()
   // put index number of move into store.index since data expected is {"game": {"cell": {"index": 0,  "value": "x"  },  "over": false  }}
-  // store.index = $(event.target).data('id')
-  // const info = board.updateBoard(event)
-  // console.log('onclick index', store.index)
-  // console.log('api player', store.player)
-  // console.log('stored info (onclick):', store)
   if (store.game.over === true) {
-    console.log('is it over?', store.game.over)
     $('#already-message').text('Game is over!')
   } else {
     board.updateBoard(data)

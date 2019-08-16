@@ -2,18 +2,16 @@
 
 const store = require('../store')
 
-// does this need anything passed in?
 const signUpSuccess = function () {
   $('#message')
-    .text('Sign Up Successful')
+    .text('Sign Up Successful. Please log in!')
   $('#message').removeClass()
-  // $('#message').className('success')
   $('#message').addClass('Success') // optional adds class for styling
   $('form').trigger('reset')
 }
 
 const signUpFailure = function () {
-  $('#message').text('Sign Up Failure')
+  $('#message').text('Sign Up Failure. Please retry!')
   $('#message').type()
   $('form').trigger('reset')
 }
@@ -21,13 +19,10 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   // handle storing user token, if it exists
   store.user = data.user
-  $('#message')
-    .text('Sign In Successful')
+  $('#message').text('Sign In Successful')
   $('#message').removeClass()
-  // $('#message').className('success')
   $('#message').addClass('success') // optional adds class for styling
-//  console.log('signinsuccess ran. User is', store.user)
-//  $('#signed-in-user').text(store.user.email)
+  $('#signed-in-user').text(`Signed in user is ${store.user.email}`)
   $('form').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -49,9 +44,7 @@ const changePasswordSuccess = function () {
   $('#message')
     .text('Change Password Successful')
   $('#message').removeClass()
-  // $('#message').className('success')
   $('#message').addClass('success') // optional adds class for styling
-  // console.log('change password success ran')
   $('form').trigger('reset')
 }
 
@@ -72,6 +65,7 @@ const signOutSuccess = function () {
   $('#sign-up').show()
   $('#change-password').hide()
   $('#game').hide()
+  $('#already-message').text('')
 }
 
 const signOutFailure = function () {
