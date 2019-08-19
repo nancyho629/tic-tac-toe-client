@@ -7,7 +7,7 @@ const resetSuccess = function (data) {
   $('#message').text(`New Game Has Started!`)
   $('#game-id').text(`Current Game ID is: ${store.game.id}`)
   $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('success animated bounceIn')
   $('.box').text('')
   $('#player-message').text('It\'s Player X\'s turn!')
   $('#already-message').text('')

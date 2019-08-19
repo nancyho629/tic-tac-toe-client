@@ -27,13 +27,13 @@ const signInSuccess = function (data) {
   $('#hide').css('display', 'block')
   $('#sign-in').hide()
   $('#sign-up').hide()
+  $('.headingtop').hide()
   $('.game').show()
   // $('#create-game').show()
   $('#sign-out').show()
   $('#change-password').show()
   $('#game-stats').show()
   $('.navbar').show()
-  $('.headingtop').hide()
 }
 
 const signInFailure = function () {
@@ -66,12 +66,12 @@ const signOutSuccess = function () {
   $('#player-message').text('')
   $('#sign-in').show()
   $('#sign-up').show()
+  $('.headingtop').show()
   $('#change-password').hide()
   $('.game').hide()
   $('#sign-out').hide()
   $('#game-stats').hide()
   $('#game-board').hide()
-  $('.headingtop').show()
   $('.navbar').hide()
   $('#game-id').text(``)
 }
