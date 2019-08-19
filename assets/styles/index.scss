@@ -7,6 +7,15 @@ $font-color: $light;
 // #hide {
 //   display: none;
 // }
+.already-messages {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  #already-message {
+    margin-right: 20px;
+  }
+}
 
 .box {
   align-items: center;
@@ -45,7 +54,6 @@ footer {
 
 .messages,
 .player,
-.already-message,
 .game-id-message {
   align-items: center;
   display: flex;
