@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
     <head>
       <title>Nancy's Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
 
 <!-- Nav Bar Brand -->
       <a class="navbar-brand" href="#">
-        <h1>Tic Tac Toe</h1>
+        <h1 class="navstyle">Tic Tac Toe</h1>
       </a>
 
 <!-- Collapse button -->
@@ -87,12 +88,18 @@
       <main>
         <div class="sign-in-container">
 <!-- sign up -->
-          <form id='sign-up' class='border'>
+          <form id='sign-up'>
             <fieldset>
               <legend>Sign Up!</legend>
-              <input type="text" class:"form-control" name="credentials[email]" placeholder="Email">
-              <input type="password" class:"form-control" name="credentials[password]" placeholder="Password">
+<<<<<<< HEAD
+              <input type="text" class="form-control" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
               <input type="password" class:"form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
+=======
+              <input type="text" class="form-control" name="credentials[email]" placeholder="Email">
+              <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+              <input type="password" class="form-control" name="credentials[password_confirmation]" value="Confirm Password">
+>>>>>>> styling3
               <input type="submit" value="Sign Up!">
             </fieldset>
           </form>
@@ -100,11 +107,11 @@
             </div>
           <div class="sign-in-container">
 <!-- sign in -->
-            <form id='sign-in' class='border'>
+            <form id='sign-in'>
               <fieldset>
                 <legend>Sign In!</legend>
-                <input type="text" class:"form-control" name="credentials[email]" placeholder="Email">
-                <input type="password" class:"form-control" name="credentials[password]" placeholder="Password">
+                <input type="text" class="form-control" name="credentials[email]" placeholder="Email">
+                <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
                 <input type="submit" value="Sign In!">
               </fieldset>
             </form>
@@ -124,18 +131,6 @@
         </section>
 
 <!-- Messages end -->
-
-<!-- New game -->
-<section class="game">
-    <form id='create-game'>
-      <fieldset>
-        <!-- <legend>New Game!</legend> -->
-        <input type="submit" value="New Game!">
-      </fieldset>
-    </form>
-</section>
-<!-- create game end -->
-
 <!-- game board -->
   <div class='container'>
           <section id='game-board'>
@@ -156,8 +151,18 @@
           </div>
         </section>
       </div>
-
 <!-- game board end -->
+
+<!-- New game -->
+<section class="game">
+    <form id='create-game'>
+      <fieldset>
+        <!-- <legend>New Game!</legend> -->
+        <input type="submit" value="New Game!">
+      </fieldset>
+    </form>
+</section>
+<!-- create game end -->
       </main>
 
 

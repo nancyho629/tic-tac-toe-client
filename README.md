@@ -29,11 +29,12 @@
 
 ## Future Iterations
 * Improve styling
+  - Change the navbar font
 * Multiplayer
 * When loading game stats, if the user has more than 50 games it takes a while to load so it's best to create a loading message.
 
 ## Wireframe & User Stories
-
+Wireframe - https://imgur.com/a/meSW8Ti
   - As a user I can sign up.
   - As a user I can log in.
   - As a user, when I sign in the game board appears.
