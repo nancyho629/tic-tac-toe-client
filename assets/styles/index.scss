@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 @import 'fonts';
 @import '~bootstrap/scss/bootstrap';
 @import '~animate.css/animate';
@@ -20,7 +19,7 @@ $font-color: $light;
 }
 
 .box {
-  align-items: center;
+  // align-items: center;
   //  background-color: $secondary;
   border: 2px solid $black;
   display: flex;
@@ -31,7 +30,6 @@ $font-color: $light;
   min-height: 100px;
   min-width: 100px;
   text-shadow: 1px 1px 2px;
-  width: 10vh;
 }
 
 footer {
@@ -56,7 +54,8 @@ footer {
 
 .messages,
 .player,
-.game-id-message {
+.game-id-message,
+.move-messages {
   align-items: center;
   display: flex;
   font-family: 'Josefin Sans', sans-serif;

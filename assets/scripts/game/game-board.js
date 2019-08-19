@@ -7,7 +7,7 @@ const updateBoard = function (data) {
   store.index = indexID
   store.game.cells[indexID] = store.player
   if ($(data.target).html() === 'o' || $(data.target).html() === 'x') {
-    $('#already-message').text('There\'s already a move there!')
+    $('#move-message').text('There\'s already a move there!')
   } else {
     if ($(data.target).html() !== 'o' && $(data.target).html() !== 'x') {
       if (store.player === 'x') {
@@ -18,7 +18,7 @@ const updateBoard = function (data) {
       } else if (store.player === 'o') {
         store.player = 'x'
         $(data.target).text('o')
-        $('#player-message').text('It\'s Player X\'s turn now')
+        $('#player-message').text('It\'s Player X\'s turn now!')
         $('#already-message').text('')
       }
     }
@@ -44,7 +44,7 @@ const winner = function (data) {
   } else if ((gameBoardFill[1] === 'x' && gameBoardFill[4] === 'x' && gameBoardFill[7] === 'x') || (gameBoardFill[1] === 'o' && gameBoardFill[4] === 'o' && gameBoardFill[7] === 'o')) {
     return gameBoardFill[1]
   } else if ((gameBoardFill[2] === 'x' && gameBoardFill[5] === 'x' && gameBoardFill[8] === 'x') || (gameBoardFill[2] === 'o' && gameBoardFill[5] === 'o' && gameBoardFill[8] === 'o')) {
-    return gameBoardFill[1]
+    return gameBoardFill[2]
   } else {
     if (!(gameBoardFill.includes(''))) {
       $('#player-message').text('It\'s a draw!!')
