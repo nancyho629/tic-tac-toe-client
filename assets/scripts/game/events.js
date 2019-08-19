@@ -19,7 +19,7 @@ const onClickedSquare = function (data) {
   $('#move-message').text('')
   // put index number of move into store.index since data expected is {"game": {"cell": {"index": 0,  "value": "x"  },  "over": false  }}
   if (store.game.over === true) {
-    $('#already-message').text('Game is over!')
+    $('#move-message').text('Game is over!')
   } else {
     board.updateBoard(data)
     if (board.checkWinner()) {

@@ -11,6 +11,7 @@ const resetSuccess = function (data) {
   $('.box').text('')
   $('#player-message').text('It\'s Player X\'s turn!')
   $('#already-message').text('')
+  $('#move-message').text('')
   $('#game-board').show()
 }
 
