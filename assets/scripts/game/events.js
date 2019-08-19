@@ -23,10 +23,10 @@ const onClickedSquare = function (data) {
     board.updateBoard(data)
     if (board.checkWinner()) {
       if (store.player === 'x') {
-        $('#player-message').text('o has won!')
+        $('#player-message').text('O has won!')
         store.game.over = true
       } else {
-        $('#player-message').text('x has won!')
+        $('#player-message').text('X has won!')
         store.game.over = true
       }
     }
