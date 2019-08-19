@@ -19,7 +19,7 @@ const resetFailure = function () {
 }
 
 const gameUpdateSuccess = function () {
-  $('#message').text('Gameboard has been updated with the move!')
+//  $('#message').text('Gameboard has been updated with the move!')
   $('#message').removeClass()
   $('#message').addClass('success')
 }

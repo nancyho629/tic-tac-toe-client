@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <head>
       <title>Nancy's Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,86 +12,159 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Tic Tac Toe Game</h1>
-      <div id="message"></div>
-      <div id="player-message"></div>
-      <div id="already-message"></div>
 
-      <hr>
-        <main>
-          <section>
+    <body>
+      <section class="headingtop">
+        <h1>Tic Tac Toe Game</h1>
+      </section>
+<!-- external content collapse stuff start -->
+
+<!-- Navbar -->
+      <nav class="navbar navbar-light amber" style="background-color:#20c997">
+<!-- navbar-dark bg-dark -->
+
+<!-- Nav Bar Brand -->
+      <a class="navbar-brand" href="#">
+        <h1>Tic Tac Toe</h1>
+      </a>
+
+<!-- Collapse button -->
+      <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbar6" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon1"><span></span><span></span><span></span></div>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav align-items-end">
+<!-- Signed in user deets -->
+          <li class="nav-item active">
+          <section class='sign-in'>
             <div id="signed-in-user"></div>
-            <form id='sign-up' class='border'>
+          </section>
+          </li>
+<!-- Signed in user deets end -->
+<!-- Change password nav link -->
+          <li class="nav-item active">
+<!-- change password -->
+            <form id='change-password'>
               <fieldset>
-                <legend>Sign Up!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="password" name="credentials[password_confirmation]" value="Confirm Password">
-                <input type="submit" value="Sign Up!">
+              <legend>Change Password!</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password">
+              <input type="password" name="passwords[new]" value="New Password">
+              <input type="submit" value="Change Password!">
               </fieldset>
             </form>
+<!-- change password end -->
+          </li>
+<!-- Game stats nav link -->
+          <li class="nav-item active">
+<!-- <a class="nav-link active"> -->
+<!-- game stats -->
+            <form id='game-stats'>
+              <fieldset>
+<!-- <legend>Get your game stats here!</legend> -->
+              <input type="submit" value="Game Stats!">
+              </fieldset>
+            </form>
+<!-- game stats end -->
+                <!-- </a> -->
+          </li>
+          <li class="nav-item active">
+<!-- <a class="nav-link active"> -->
+<!-- sign out -->
+            <form id='sign-out'>
+              <fieldset>
+<!-- <legend>Sign Out!</legend> -->
+              <input type="submit" value="Sign Out!">
+              </fieldset>
+            </form>
+<!-- sign out end -->
+<!-- </a> -->
+          </li>
+        </ul>
+      </div>
+      </nav>
+
+      <main>
+        <div class="sign-in-container">
+<!-- sign up -->
+          <form id='sign-up' class='border'>
+            <fieldset>
+              <legend>Sign Up!</legend>
+              <input type="text" class:"form-control" name="credentials[email]" placeholder="Email">
+              <input type="password" class:"form-control" name="credentials[password]" placeholder="Password">
+              <input type="password" class:"form-control" name="credentials[password_confirmation]" value="Confirm Password">
+              <input type="submit" value="Sign Up!">
+            </fieldset>
+          </form>
+<!-- sign up end -->
+            </div>
+          <div class="sign-in-container">
+<!-- sign in -->
             <form id='sign-in' class='border'>
               <fieldset>
                 <legend>Sign In!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="text" class:"form-control" name="credentials[email]" placeholder="Email">
+                <input type="password" class:"form-control" name="credentials[password]" placeholder="Password">
                 <input type="submit" value="Sign In!">
               </fieldset>
             </form>
-            <div id="hide">
-            <form id='change-password' class='border'>
-              <fieldset>
-                <legend>Change Password!</legend>
-                <input type="password" name="passwords[old]" placeholder="Old Password">
-                <input type="password" name="passwords[new]" value="New Password">
-                <input type="submit" value="Change Password!">
-              </fieldset>
-            </form>
-          </div>
-          <form id='game-stats' class='border'>
-            <fieldset>
-              <legend>Get your game stats here!</legend>
-              <input type="submit" value="Game Stats!">
-            </fieldset>
-          </form>
-            <form id='sign-out' class='border'>
-              <fieldset>
-                <legend>Sign Out!</legend>
-                <input type="submit" value="Sign Out!">
-              </fieldset>
-            </form>
-          </section>
+<!-- sign in end -->
+            </div>
 
-        <section id="game">
-          <form id='create-game' class='border'>
-            <fieldset>
-              <legend>New Game!</legend>
-              <input type="submit" value="New Game!">
-            </fieldset>
-          </form>
-<hr>
+<!-- Messages -->
+
+        <section class='messages'>
+          <div id="message"></div>
+        </section>
+        <section class='player'>
+          <div id="player-message"></div>
+        </section>
+        <section class='messages'>
+          <div id="already-message"></div>
+        </section>
+
+<!-- Messages end -->
+
+<!-- New game -->
+<section class="game">
+    <form id='create-game'>
+      <fieldset>
+        <!-- <legend>New Game!</legend> -->
+        <input type="submit" value="New Game!">
+      </fieldset>
+    </form>
+</section>
+<!-- create game end -->
+
+<!-- game board -->
+  <div class='container'>
           <section id='game-board'>
           <div class="row">
-            <div data-id="0" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="1" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="2" class="col-4 col-md-4 box alt-color"></div>
+            <div data-id="0" class="col-4 col-md-4 box border-left border-top"></div>
+            <div data-id="1" class="col-4 col-md-4 box border-center border-top"></div>
+            <div data-id="2" class="col-4 col-md-4 box border-right border-top"></div>
           </div>
           <div class="row">
-            <div data-id="3" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="4" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="5" class="col-4 col-md-4 box alt-color"></div>
+            <div data-id="3" class="col-4 col-md-4 box border-left border-middle"></div>
+            <div data-id="4" class="col-4 col-md-4 box border-center border-middle"></div>
+            <div data-id="5" class="col-4 col-md-4 box border-right border-middle"></div>
           </div>
           <div class="row">
-            <div data-id="6" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="7" class="col-4 col-md-4 box alt-color"></div>
-            <div data-id="8" class="col-4 col-md-4 box alt-color"></div>
+            <div data-id="6" class="col-4 col-md-4 box border-left border-bottom"></div>
+            <div data-id="7" class="col-4 col-md-4 box border-center border-bottom"></div>
+            <div data-id="8" class="col-4 col-md-4 box border-right border-bottom"></div>
           </div>
         </section>
-        </section>
+      </div>
 
-
+<!-- game board end -->
       </main>
+
+
+  <footer>
+  <p>Made by Nancy Ho!</p>
+  </footer>
+
 
     </body>
 </html>

@@ -11,7 +11,7 @@ const signUpSuccess = function () {
 }
 
 const signUpFailure = function () {
-  $('#message').text('Sign Up Failure. Please retry!')
+  $('#message').text('Sign Up Failed. Please retry!')
   $('#message').type()
   $('form').trigger('reset')
 }
@@ -24,19 +24,20 @@ const signInSuccess = function (data) {
   $('#message').addClass('success') // optional adds class for styling
   $('#signed-in-user').text(`Signed in user is ${store.user.email}`)
   $('form').trigger('reset')
+  $('#hide').css('display', 'block')
   $('#sign-in').hide()
   $('#sign-up').hide()
-  $('#create-example').show()
-  $('#hide').css('display', 'block')
-  $('#game').show()
-  $('#create-game').show()
+  $('.game').show()
+  // $('#create-game').show()
   $('#sign-out').show()
   $('#change-password').show()
   $('#game-stats').show()
+  $('.navbar').show()
+  $('.headingtop').hide()
 }
 
 const signInFailure = function () {
-  $('#message').text('Sign In Failure')
+  $('#message').text('Sign In Failed')
   $('form').trigger('reset')
 }
 
@@ -61,11 +62,17 @@ const signOutSuccess = function () {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
+  $('#already-message').text('')
+  $('#player-message').text('')
   $('#sign-in').show()
   $('#sign-up').show()
   $('#change-password').hide()
-  $('#game').hide()
-  $('#already-message').text('')
+  $('.game').hide()
+  $('#sign-out').hide()
+  $('#game-stats').hide()
+  $('#game-board').hide()
+  $('.headingtop').show()
+  $('.navbar').hide()
 }
 
 const signOutFailure = function () {
