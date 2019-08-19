@@ -6,20 +6,34 @@ const updateBoard = function (data) {
   const indexID = $(data.target).data('id')
   store.index = indexID
   store.game.cells[indexID] = store.player
-  if ($(data.target).html() === 'o' || $(data.target).html() === 'x') {
-    $('#move-message').text('There\'s already a move there!')
-  } else {
-    if ($(data.target).html() !== 'o' && $(data.target).html() !== 'x') {
-      if (store.player === 'x') {
-        store.player = 'o'
-        $(data.target).text('x')
-        $('#player-message').text('It\'s Player O\'s turn now!')
-        $('#already-message').text('')
-      } else if (store.player === 'o') {
-        store.player = 'x'
-        $(data.target).text('o')
-        $('#player-message').text('It\'s Player X\'s turn now!')
-        $('#already-message').text('')
+  if ($(data.target).html() === '') {
+    if (store.player === 'x') {
+      $(data.target).text('x')
+      $('#player-message').text('It\'s Player O\'s turn now!')
+      $('#already-message').text('')
+      store.player = 'o'
+      if (winner()) {
+        if (store.player === 'x') {
+          $('#player-message').text('O has won!')
+          store.game.over = true
+        } else {
+          $('#player-message').text('X has won!')
+          store.game.over = true
+        }
+      }
+    } else if (store.player === 'o') {
+      $(data.target).text('o')
+      $('#player-message').text('It\'s Player X\'s turn now!')
+      $('#already-message').text('')
+      store.player = 'x'
+      if (winner()) {
+        if (store.player === 'x') {
+          $('#player-message').text('O has won!')
+          store.game.over = true
+        } else {
+          $('#player-message').text('X has won!')
+          store.game.over = true
+        }
       }
     }
   }

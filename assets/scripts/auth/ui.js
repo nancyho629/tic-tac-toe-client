@@ -12,7 +12,6 @@ const signUpSuccess = function () {
 
 const signUpFailure = function () {
   $('#message').text('Sign Up Failed. Please retry!')
-  $('#message').type()
   $('form').trigger('reset')
 }
 
