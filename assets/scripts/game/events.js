@@ -20,18 +20,11 @@ const onClickedSquare = function (data) {
   // put index number of move into store.index since data expected is {"game": {"cell": {"index": 0,  "value": "x"  },  "over": false  }}
   if (store.game.over === true) {
     $('#already-message').text('Game is over!')
+  } else if ($(data.target).html() === 'o' || $(data.target).html() === 'x') {
+    $('#move-message').text('There\'s already a move there!')
   } else {
     board.updateBoard(data)
-    if (board.checkWinner()) {
-      // console.log(store.game)
-      if (store.player === 'x') {
-        $('#player-message').text('O has won!')
-        store.game.over = true
-      } else {
-        $('#player-message').text('X has won!')
-        store.game.over = true
-      }
-    }
+    console.log(store.game)
   }
   api.updateGame()
     .then(ui.gameUpdateSuccess)
