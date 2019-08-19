@@ -73,6 +73,7 @@ const signOutSuccess = function () {
   $('#game-board').hide()
   $('.headingtop').show()
   $('.navbar').hide()
+  $('#game-id').text(``)
 }
 
 const signOutFailure = function () {

@@ -4,11 +4,12 @@ const store = require('../store')
 
 const resetSuccess = function (data) {
   store.game = data.game
-  $('#message').text('New Game Has Started!')
+  $('#message').text(`New Game Has Started!`)
+  $('#game-id').text(`Current Game ID is: ${store.game.id}`)
   $('#message').removeClass()
   $('#message').addClass('success')
   $('.box').text('')
-  $('#player-message').text('It\'s Player X\'s turn')
+  $('#player-message').text('It\'s Player X\'s turn!')
   $('#already-message').text('')
   $('#game-board').show()
 }

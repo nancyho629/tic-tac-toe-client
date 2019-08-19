@@ -50,7 +50,7 @@
               <fieldset>
               <legend>Change Password!</legend>
               <input type="password" name="passwords[old]" placeholder="Old Password">
-              <input type="password" name="passwords[new]" value="New Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
               <input type="submit" value="Change Password!">
               </fieldset>
             </form>
@@ -58,23 +58,18 @@
           </li>
 <!-- Game stats nav link -->
           <li class="nav-item active">
-<!-- <a class="nav-link active"> -->
 <!-- game stats -->
             <form id='game-stats'>
               <fieldset>
-<!-- <legend>Get your game stats here!</legend> -->
               <input type="submit" value="Game Stats!">
               </fieldset>
             </form>
 <!-- game stats end -->
-                <!-- </a> -->
           </li>
           <li class="nav-item active">
-<!-- <a class="nav-link active"> -->
 <!-- sign out -->
             <form id='sign-out'>
               <fieldset>
-<!-- <legend>Sign Out!</legend> -->
               <input type="submit" value="Sign Out!">
               </fieldset>
             </form>
@@ -84,7 +79,6 @@
         </ul>
       </div>
       </nav>
-
       <main>
         <div class="sign-in-container">
 <!-- sign up -->
@@ -117,6 +111,9 @@
 
         <section class='messages'>
           <div id="message"></div>
+        </section>
+        <section class='game-id-message'>
+          <div id="game-id"></div>
         </section>
         <section class='player'>
           <div id="player-message"></div>
@@ -152,7 +149,6 @@
 <section class="game">
     <form id='create-game'>
       <fieldset>
-        <!-- <legend>New Game!</legend> -->
         <input type="submit" value="New Game!">
       </fieldset>
     </form>
