@@ -27,5 +27,4 @@ $(() => {
   $('.first-button').on('click', () => {
     $('.animated-icon1').toggleClass('open')
   })
-  $('.button-collapse').sideNav()
 })
