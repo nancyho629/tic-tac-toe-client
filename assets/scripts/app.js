@@ -27,4 +27,8 @@ $(() => {
   $('.first-button').on('click', () => {
     $('.animated-icon1').toggleClass('open')
   })
+  $('#sign-out').on('click', () => {
+    $('.collapse').collapse('hide')
+    $('.animated-icon1').toggleClass('open')
+  })
 })

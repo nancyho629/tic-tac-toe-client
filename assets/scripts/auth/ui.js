@@ -41,16 +41,13 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  $('#message')
-    .text('Change Password Successful')
-  $('#message').removeClass()
-  $('#message').addClass('success') // optional adds class for styling
+  $('#change-pw-message').text('Change Password Successful').delay(3000).fadeOut()
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
-  $('#message')
-    .text('Change password Failure')
+  $('#change-pw-message')
+    .text('Change password failed')
   $('form').trigger('reset')
 }
 
